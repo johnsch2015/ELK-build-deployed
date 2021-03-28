@@ -81,19 +81,16 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - Filebeat-7.4.0-amd64.deb, Metricbeat
 
-These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. Filebeat coll
-Filebeat monitors the log files, locations specified regarding traffic. Metricbeat collects metric and statistical information. 
+These Beats allow us to collect the following information from each machine: Filebeat collects the log files, locations specified regarding traffic. Metricbeat collects metric and statistical information. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____ file.
-- Update the configuration file to include ELK machine IP address.
+- Copy the appropriate configuration file (originally modified from ansible config file) to local ansible container. For example, ELK, filebeat, metricbeat locations.
+- Update the hosts and config files to include the internal webserver IP addresses.
 - Run the playbook, and navigate to docker container list to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- Which file is the playbook? Where do you copy it?_Copy to /etc/ansible folder
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Which file is the playbook? For ELK, the Install-elk is the playbook and the filebeat and metricbeat both are clearly labeled. Where do you copy it? Copy to /etc/ansible folder in the ansible container and on each web vm.
+- Which file do you update to make Ansible run the playbook on a specific machine? The ansible config file (i.e. filebeat-playbook.yml). How do I specify which machine to install the ELK server on versus which to install Filebeat on? ELK will install from the provisioner attach to the container created. There are two configuration files to edit and one will say Intall-elk, filebeat, and metricbeat. Each will have to be edited, run on each vm with the appropriate IP addresses and configuration.
+- Which URL do you navigate to in order to check that the ELK server is running? http://[your.VM.IP]:5601/app/kibana. This would be the IP address that was added to the config file.
