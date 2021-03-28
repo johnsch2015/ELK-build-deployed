@@ -55,5 +55,4 @@
     - name: Enable service docker on boot
       systemd:
         name: docker
->>>>>>> baf0a6b1f813aecee44ee2dc9ca944ab3c39a2f6
         enabled: yes
