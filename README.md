@@ -64,8 +64,8 @@ The playbook implements the following tasks:
 - Use more memory
 - download and launch a docker elk container
 - Enable service docker on boot
-      
-- Ansible/Install-elk.yml.txt. https://github.com/johnsch2015/project1/blob/57261510895db8956d383120b1dfc95eb85b88a9/Ansible/Install-elk.yml.txt
+  
+Ansible/Install-elk.yml.txt. https://github.com/johnsch2015/project1/blob/57261510895db8956d383120b1dfc95eb85b88a9/Ansible/Install-elk.yml.txt
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -82,7 +82,8 @@ We have installed the following Beats on these machines:
 - Filebeat-7.4.0-amd64.deb, Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. Filebeat coll
+Filebeat monitors the log files, locations specified regarding traffic. Metricbeat collects metric and statistical information. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
