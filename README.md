@@ -81,7 +81,7 @@ https://github.com/johnsch2015/project1/raw/main/snips/sudo%20docker%20ps.PNG
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- List the IP addresses of the machines you are monitoring_
+- List of monitored IPs
 10.0.0.8, 10.0.0.6
 We have installed the following Beats on these machines:
 - Filebeat-7.4.0-amd64.deb, Metricbeat
