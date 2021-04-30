@@ -4,7 +4,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Diagrams/Complete Network Diagram Including ELK.png)
+Diagrams/Complete Network Diagram Including ELK.png
 https://github.com/johnsch2015/project1/blob/main/Diagrams/Complete%20Network%20Diagram%20Including%20ELK.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible file may be used to install only certain pieces of it, such as Filebeat.
@@ -47,7 +47,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - My personal IP
 
 Machines within the network can only be accessed by other machines on the network
-- Which machine did you allow to access your ELK VM? What was its IP address? Jump Box provisioner VM only has access to ELK VM with local ip via docker attach.
+- Jump Box provisioner VM only has access to ELK VM with local ip via docker attach.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -85,7 +85,6 @@ This ELK server is configured to monitor the following machines:
 10.0.0.8, 10.0.0.6
 We have installed the following Beats on these machines:
 - Filebeat-7.4.0-amd64.deb, Metricbeat
-
 These Beats allow us to collect the following information from each machine: Filebeat collects the log files, locations specified regarding traffic. Metricbeat collects metric and statistical information. 
 
 ### Using the Playbook
@@ -96,6 +95,6 @@ SSH into the control node and follow the steps below:
 - Update the hosts and config files to include the internal webserver IP addresses.
 - Run the playbook, and navigate to docker container list to check that the installation worked as expected.
 
-- Which file is the playbook? For ELK, the Install-elk is the playbook and the filebeat and metricbeat both are clearly labeled. Where do you copy it? Copy to /etc/ansible folder in the ansible container and on each web vm.
-- Which file do you update to make Ansible run the playbook on a specific machine? The ansible config file (i.e. filebeat-playbook.yml). How do I specify which machine to install the ELK server on versus which to install Filebeat on? ELK will install from the provisioner attach to the container created. There are two configuration files to edit and one will say Intall-elk, filebeat, and metricbeat. Each will have to be edited, run on each vm with the appropriate IP addresses and configuration.
-- Which URL do you navigate to in order to check that the ELK server is running? http://[your.VM.IP]:5601/app/kibana. This would be the IP address that was added to the config file.
+- For ELK, the Install-elk is the playbook and the filebeat and metricbeat both are clearly labeled. Copy to /etc/ansible folder in the ansible container and on each web vm.
+- Update the ansible config file to make ansible run the playbook on a specific machine (i.e. filebeat-playbook.yml). ELK will install from the provisioner attach to the container created. There are two configuration files to edit and one will say Intall-elk, filebeat, and metricbeat. Each will have to be edited, run on each vm with the appropriate IP addresses and configuration.
+- Make sure the ELK server is running by going to http://[your.VM.IP]:5601/app/kibana. This would be the IP address that was added to the config file.
