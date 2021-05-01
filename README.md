@@ -1,6 +1,4 @@
-# *Project 1* 
-*Azure Elk Deployment*
-
+# *Project 1 - Azure Elk Deployment*
 
 The files in this repository were used to configure the network depicted below.
 
